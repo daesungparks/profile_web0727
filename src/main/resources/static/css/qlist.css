@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+td.board_title {
+	
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arial;
+	background-color:#a515c4;
+	color:#ffffff;
+	text-align:center;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1px;
+}
+
+td.board_content {
+	
+	font-size: 20px;
+	font-weight: normal;
+	font-family: malgun;
+	background-color:#ec9af8;
+	color:#a515c4;
+	text-align:center;
+	border-style:solid;
+	border-color:#ffffff;
+	border-width:1px;
+}

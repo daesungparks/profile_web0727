@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+<mapper namespace="com.ds.test.profileweb.dao.IDao">
+	<!--member sql-->
+	<insert id="joinDao">
+		INSERT INTO web_member (mid, mpw, mname, memail) VALUES(#{param1},#{param2},#{param3},#{param4})
+	</insert>
+	
+	<select id="checkIdDao" resultType="int">
+		SELECT COUNT(*) FROM web_member WHERE mid=#{param1}
+	</select>
+	
+	<select id="checkIDPwDao" resultType="int">
+		SELECT COUNT(*) FROM web_member WHERE mid=#{param1} AND mpw=#{param2}
+	</select>
+	
+	<select id="memberInfoDao" resultType="com.ds.test.profileweb.dto.MemberDto">
+		SELECT * FROM web_member WHERE mid=#{param1}
+	</select>
+	
+	 <update id="infomodifyDao">
+      update web_member set mpw=#{param1}, mname=#{param2}, memail=#{param3} where mid=#{param4}
+   </update>
+   
+   <!--  board Sql -->
+   	 <insert id="writeDao">
+      insert into web_board(qnum, qid, qname, qcontent, qemail) values(web_board_seq.nextval,#{param1},#{param2},#{param3},#{param4})
+   </insert>
+   
+     <select id="listDao" resultType="com.ds.test.profileweb.dto.BoardDto">
+      select * from web_board order by qnum desc
+   </select>
+
+
+</mapper>
