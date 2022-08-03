@@ -27,8 +27,12 @@
 	</tr>
 	<tr>
 		<table width="70%" cellspacing="0" border="0" cellpadding="10">
-			<tr height="533">
+			
+			<tr height="533" align="center">
+				
 				<td bgcolor="#D1B2FF" align=center >
+				<span class="content_text"> ★QUESTION BOARD★ </span><br><br>
+				
 					<table width="85%"border="0" cellspacing="0" cellpadding="10">
 						<tr>
 							<td class="board_title">NO</td>
