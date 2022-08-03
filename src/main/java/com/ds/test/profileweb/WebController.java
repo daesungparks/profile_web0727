@@ -65,6 +65,7 @@ public class WebController {
 			MemberDto memberDto = dao.memberInfoDao(sid);
 			
 			model.addAttribute("memberDto", memberDto);
+			model.addAttribute("sid",sid);
 			
 		} else {
 			model.addAttribute("sid", "GUEST");

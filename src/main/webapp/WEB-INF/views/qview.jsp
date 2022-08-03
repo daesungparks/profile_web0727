@@ -6,6 +6,7 @@
 <head>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/titletext.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/content.css">
+<script type="text/javascript " src="${pageContext.request.contextPath}/resources/js/question.js"></script>
 <meta charset="UTF-8">
 <title>** profile</title>
 </head>
@@ -28,7 +29,7 @@
 			<tr height="533">
 				<td bgcolor="#D1B2FF" align=center >
 					<table border="0" cellspacing="0" cellpadding="10">
-						<form action ="qmodify" method="post">
+						<form action ="qmodify" method="post" name ="question_form">
 							<input type="hidden" name="qnum" value="${contentDto.qnum }">
 							<tr>
 								<td><span class="content_text" >MEMBER ID :</span></td>
@@ -60,7 +61,7 @@
 							%>
 							<tr>
 									<td colspan="2">
-										<input class="button" type="submit" value="MODIFY">&nbsp;&nbsp;
+										<input class="button" type="button" value="MODIFY" onclick="boardCheck()">&nbsp;&nbsp;
 										<input class="button" type="button" value="DELETE" onclick="location.href='delete?qnum='+${contentDto.qnum}">						
 									</td>
 									</tr>

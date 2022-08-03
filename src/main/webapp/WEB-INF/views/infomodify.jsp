@@ -5,6 +5,8 @@
 <head>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/titletext.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/content.css">
+<script type="text/javascript " src="${pageContext.request.contextPath}/resources/js/join.js"></script>
+
 <meta charset="UTF-8">
 <title>** profile</title>
 </head>
@@ -27,7 +29,7 @@
 			<tr height="533">
 				<td bgcolor="#D1B2FF" align=center >
 					<table border="0" cellspacing="0" cellpadding="10">
-						<form action ="infomodifyOk" method="post">
+						<form action ="infomodifyOk" method="post" name="join_form">
 							<tr>
 								<td><span class="content_text" >MEMBER ID :</span></td>
 								<td><input class="input_box1" type="text" name="mid" value="${memberDto.mid }" readonly></td>
@@ -54,7 +56,7 @@
 							</tr>
 							<tr>
 								<td colspan="2" align=center>
-									<input class="button" type="submit" value="MODIFY">&nbsp;
+									<input class="button" type="button" value="MODIFY" onclick ="joinCheck()">&nbsp;
 									<input class="button" type="button" value="CANCLE" onclick="location.href='index'">
 								</td>
 							</tr>
