@@ -30,48 +30,49 @@
 			<tr height="533">
 				<td bgcolor="#D1B2FF" align=center >
 					<table width="85%"border="0" cellspacing="0" cellpadding="10">
-						 <tr>
-                        <td class="board_title">NO</td>
-                        <td class="board_title">ID</td>
-                        <td class="board_title" width="50%">QUESTION</td>
-                        <td class="board_title">NAME</td>
-                        <td class="board_title">DATE</td>
-                     </tr>
-                     <c:forEach items="${list }" var="dto">
-                     <tr>
-                        <td class="board_content">${dto.qnum }</td>
-                        <td class="board_content">${dto.qid }</td>
-                        <td class="board_content" style="text-align:left;">
-                           <a href="#" style="color:black">
-                              <c:choose>
-                                 <c:when test="${fn:length(dto.qcontent) > 25 }">
-                                    <c:out value="${fn:substring(dto.qcontent,0,25)}"></c:out>...
-                                 </c:when>   
-                                 <c:otherwise>
-                                    <c:out value="${dto.qcontent }"></c:out>
-                                 </c:otherwise>
-                              </c:choose>
-                           </a>
-                        </td>
-                        <td class="board_content">${dto.qname }</td>
-                        <td class="board_content">
-                           <c:out value="${fn:substring(dto.qdate,0,10) }"></c:out>
-                        </td> 
-                     </tr>
-                     </c:forEach>
-                     <tr>
-                        <td colspan="5" align="right">
-                           <input class="button" type="button" value="WRITE" onclick="location.href='question'">
-                        </td>
-                     </tr>
-                  </table>
-               </td>
-            </tr>
-         </table>
-      </tr>
-   </table>
-   </center>
-
+						<tr>
+							<td class="board_title">NO</td>
+							<td class="board_title">ID</td>
+							<td class="board_title" width="40%">QUESTION</td>
+							<td class="board_title">NAME</td>
+							<td class="board_title">DATE</td>
+						</tr>
+						</tr>
+						<c:forEach items="${list}" var="dto">
+						<tr>
+							<td class="board_content">${dto.qnum }</td>
+							<td class="board_content">${dto.qid }</td>
+							<td class="board_content" style="text-align: left;">
+							<a href="qview?qnum=${dto.qnum}" style="color:black">
+							<c:choose>
+							<c:when test="${fn:length(dto.qcontent) > 25}">
+								<c:out value="${fn:substring(dto.qcontent,0,25)}">					
+								</c:out>
+							</c:when>
+							<c:otherwise>
+								<c:out value="${dto.qcontent }"></c:out>
+							</c:otherwise>
+							</c:choose>
+							</a>
+							</td>
+							<td class="board_content">${dto.qname }</td>
+							<td class="board_content">
+								<c:out value="${fn:substring(dto.qdate,0,20) }"></c:out></td>
+						</tr>
+						</c:forEach>
+						
+						<tr>
+							<td colspan="5" align="right">
+								<input class="button" value="WRITE" onclick="location.href='question'">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</tr>
+	</table>
+	</center>
 	<%@ include file="include/footer.jsp" %>
 </body>
 </html>

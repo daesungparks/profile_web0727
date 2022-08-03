@@ -46,7 +46,7 @@
 				<a href="profile">PROFILE</a>
 			</td>
 			<td class="header_menu" width="7%">
-				<a href="question">QUESTION</a>
+				<a href="list">QUESTION</a>
 			</td>
 			<td class="header_menu" width="6%">
 				<a href="contact">CONTACT</a>

@@ -34,6 +34,17 @@
      <select id="listDao" resultType="com.ds.test.profileweb.dto.BoardDto">
       select * from web_board order by qnum desc
    </select>
-
+   
+  <select id="contentViewDao" resultType="com.ds.test.profileweb.dto.BoardDto">
+		SELECT * FROM web_board WHERE qnum=#{param1}
+	</select>
+	
+	<delete id="deleteDao">
+		DELETE FROM web_board WHERE qnum=#{param1}
+	</delete>
+	
+	<update id="qmodifyDao">
+		UPDATE web_board SET qname=#{param1}, qcontent=#{param2}, qemail=#{param3} WHERE qnum=#{param4}
+	</update>
 
 </mapper>

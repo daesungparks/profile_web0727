@@ -19,5 +19,7 @@ public interface IDao {
 	//board 관련 dao 메서드
 	public void writeDao(String qid, String qname ,String qcontent, String qemail); //게시판글쓰기
 	public ArrayList<BoardDto> listDao();
-	
+	public BoardDto contentViewDao(String qnum);
+	public void deleteDao(String qnum);
+	public void qmodifyDao(String qname, String qcontent, String qemail ,String qnum);
 }
